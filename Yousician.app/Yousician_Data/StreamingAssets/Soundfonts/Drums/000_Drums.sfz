@@ -1,0 +1,209 @@
+// Sfz exported from sf2 by Polyphone
+// Name     :DrumsYousician
+// Author   :
+// Copyright:
+// Date     :2016/01/21
+// Comment  :
+
+<group>
+lokey=35 hikey=76
+loop_mode=one_shot
+ampeg_attack=0.001
+
+<region>
+sample=samples\samples-bassdrumL.ogg
+lokey=35 hikey=36
+pitch_keycenter=36
+pan=0
+offset=0
+end=36749
+loop_start=0
+loop_end=36748
+
+<region>
+sample=samples\samples-snaredrumL.ogg
+lokey=37 hikey=40
+pitch_keycenter=38
+pan=0
+offset=0
+end=45936
+loop_start=0
+loop_end=45935
+pitch_keytrack=0
+transpose=0
+
+<region>
+sample=samples\samples-tomtom3L.ogg
+lokey=41 hikey=41
+pitch_keycenter=41
+pan=40
+offset=0
+end=58799
+loop_start=0
+loop_end=58798
+pitch_keytrack=0
+transpose=0
+
+<region>
+sample=samples\samples-hihatclosedL.ogg
+lokey=42 hikey=42
+pitch_keycenter=42
+pan=-60
+offset=0
+end=38586
+loop_start=0
+loop_end=38585
+
+<region>
+sample=samples\samples-tomtom3L.ogg
+lokey=43 hikey=43
+pitch_keycenter=43
+pan=36
+offset=0
+end=58799
+loop_start=0
+loop_end=58798
+pitch_keytrack=0
+transpose=0
+
+<region>
+sample=samples\samples-hihatclosedL.ogg
+lokey=44 hikey=44
+pitch_keycenter=44
+pan=-50
+offset=0
+end=38586
+loop_start=0
+loop_end=38585
+
+<region>
+sample=samples\samples-tomtom2L.ogg
+lokey=45 hikey=45
+pitch_keycenter=45
+pan=20
+offset=0
+end=51449
+loop_start=0
+loop_end=51448
+
+<region>
+sample=samples\samples-hihatopenL.ogg
+lokey=46 hikey=46
+pitch_keycenter=46
+pan=-60
+offset=0
+end=106114
+loop_start=0
+loop_end=106113
+
+<region>
+sample=samples\samples-tomtom2L.ogg
+lokey=47 hikey=47
+pitch_keycenter=47
+pan=14
+offset=0
+end=51449
+loop_start=0
+loop_end=51448
+
+<region>
+sample=samples\samples-tomtom1L.ogg
+lokey=48 hikey=48
+pitch_keycenter=48
+pan=-30
+offset=0
+end=51449
+loop_start=0
+loop_end=51448
+
+<region>
+sample=samples\samples-crashL.ogg
+lokey=49 hikey=49
+pitch_keycenter=49
+pan=40
+offset=0
+end=129542
+loop_start=0
+loop_end=129541
+
+<region>
+sample=samples\samples-tomtom1L.ogg
+lokey=50 hikey=50
+pitch_keycenter=50
+pan=-40
+offset=0
+end=51449
+loop_start=0
+loop_end=51448
+
+<region>
+sample=samples\samples-tomtom1L.ogg
+lokey=50 hikey=50
+pitch_keycenter=50
+pan=-36
+offset=0
+end=51449
+loop_start=0
+loop_end=51448
+
+<region>
+sample=samples\samples-rideL.ogg
+lokey=51 hikey=51
+pitch_keycenter=51
+pan=60
+offset=0
+end=132299
+loop_start=0
+loop_end=132298
+
+<region>
+sample=samples\samples-crashL.ogg
+lokey=52 hikey=52
+pitch_keycenter=52
+pan=-40
+offset=0
+end=129542
+loop_start=0
+loop_end=129541
+
+<region>
+sample=samples\samples-rideL.ogg
+lokey=53 hikey=53
+pitch_keycenter=53
+pan=70
+offset=0
+end=132299
+loop_start=0
+loop_end=132298
+
+<region>
+sample=samples\samples-crashL.ogg
+lokey=55 hikey=57
+pitch_keycenter=55
+pan=50
+offset=0
+end=129542
+loop_start=0
+loop_end=129541
+pitch_keytrack=0
+transpose=0
+
+<region>
+sample=samples\samples-rideL.ogg
+lokey=59 hikey=59
+pitch_keycenter=59
+pan=80
+offset=0
+end=132299
+loop_start=0
+loop_end=132298
+
+<region>
+sample=samples\woodclick.ogg
+lokey=76 hikey=76
+pitch_keycenter=76
+pan=0
+offset=0
+end=4155
+loop_start=0
+loop_end=4154

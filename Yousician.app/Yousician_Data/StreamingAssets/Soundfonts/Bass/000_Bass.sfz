@@ -1,0 +1,91 @@
+// Sfz exported from sf2 by Polyphone
+// Name     :ElectricBass
+// Author   :
+// Copyright:
+// Date     :2017/04/06
+// Comment  :
+
+<group>
+lokey=0 hikey=127
+loop_mode=no_loop
+ampeg_attack=0.001
+
+<region>
+sample=samples\ElBass-maxtreble-28.ogg
+lokey=0 hikey=32
+pitch_keycenter=28
+pan=0
+offset=0
+end=88199
+loop_start=0
+loop_end=88198
+
+<region>
+sample=samples\ElBass-maxtreble-33.ogg
+lokey=33 hikey=37
+pitch_keycenter=33
+pan=0
+offset=0
+end=88199
+loop_start=0
+loop_end=88198
+
+<region>
+sample=samples\ElBass-maxtreble-38.ogg
+lokey=38 hikey=42
+pitch_keycenter=38
+pan=0
+offset=0
+end=88199
+loop_start=0
+loop_end=88198
+
+<region>
+sample=samples\ElBass-maxtreble-43.ogg
+lokey=43 hikey=47
+pitch_keycenter=43
+pan=0
+offset=0
+end=88199
+loop_start=0
+loop_end=88198
+
+<region>
+sample=samples\ElBass-maxtreble-48.ogg
+lokey=48 hikey=52
+pitch_keycenter=48
+pan=0
+offset=0
+end=88199
+loop_start=0
+loop_end=88198
+
+<region>
+sample=samples\ElBass-maxtreble-53.ogg
+lokey=53 hikey=57
+pitch_keycenter=53
+pan=0
+offset=0
+end=88199
+loop_start=0
+loop_end=88198
+
+<region>
+sample=samples\ElBass-maxtreble-58.ogg
+lokey=58 hikey=62
+pitch_keycenter=58
+pan=0
+offset=0
+end=88199
+loop_start=0
+loop_end=88198
+
+<region>
+sample=samples\ElBass-maxtreble-63.ogg
+lokey=63 hikey=127
+pitch_keycenter=63
+pan=0
+offset=0
+end=88199
+loop_start=0
+loop_end=88198

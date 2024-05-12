@@ -1,0 +1,92 @@
+//=====================================
+// Yousician Piano Small
+//
+//
+//
+// License: CC-by
+//
+//=====================================
+
+//Notes
+<group> ampeg_release=1
+
+<region> sample=ogg\C2v4.ogg lokey=0 hikey=37 lovel=0 hivel=69 pitch_keycenter=36 volume=9
+<region> sample=ogg\C2v13.ogg lokey=0 hikey=37 lovel=70 hivel=127 pitch_keycenter=36
+
+<region> sample=ogg\D#2v4.ogg lokey=38 hikey=40 lovel=0 hivel=69 pitch_keycenter=39 volume=9
+<region> sample=ogg\D#2v13.ogg lokey=38 hikey=40 lovel=70 hivel=127 pitch_keycenter=39
+
+<region> sample=ogg\F#2v4.ogg lokey=41 hikey=43 lovel=0 hivel=69 pitch_keycenter=42 volume=9
+<region> sample=ogg\F#2v13.ogg lokey=41 hikey=43 lovel=70 hivel=127 pitch_keycenter=42
+
+<region> sample=ogg\A2v4.ogg lokey=44 hikey=46 lovel=0 hivel=69 pitch_keycenter=45 volume=9
+<region> sample=ogg\A2v13.ogg lokey=44 hikey=46 lovel=70 hivel=127 pitch_keycenter=45
+
+<region> sample=ogg\C3v4.ogg lokey=47 hikey=49 lovel=0 hivel=69 pitch_keycenter=48 volume=9
+<region> sample=ogg\C3v13.ogg lokey=47 hikey=49 lovel=70 hivel=127 pitch_keycenter=48
+
+<region> sample=ogg\D#3v4.ogg lokey=50 hikey=52 lovel=0 hivel=69 pitch_keycenter=51 volume=9
+<region> sample=ogg\D#3v13.ogg lokey=50 hikey=52 lovel=70 hivel=127 pitch_keycenter=51
+
+<region> sample=ogg\F#3v4.ogg lokey=53 hikey=55 lovel=0 hivel=69 pitch_keycenter=54 volume=9
+<region> sample=ogg\F#3v13.ogg lokey=53 hikey=55 lovel=70 hivel=127 pitch_keycenter=54
+
+<region> sample=ogg\A3v4.ogg lokey=56 hikey=58 lovel=0 hivel=69 pitch_keycenter=57 volume=9
+<region> sample=ogg\A3v13.ogg lokey=56 hikey=58 lovel=70 hivel=127 pitch_keycenter=57
+
+<region> sample=ogg\C4v4.ogg lokey=59 hikey=61 lovel=0 hivel=69 pitch_keycenter=60 volume=9
+<region> sample=ogg\C4v13.ogg lokey=59 hikey=61 lovel=70 hivel=127 pitch_keycenter=60
+
+<region> sample=ogg\D#4v4.ogg lokey=62 hikey=64 lovel=0 hivel=69 pitch_keycenter=63 volume=9
+<region> sample=ogg\D#4v13.ogg lokey=62 hikey=64 lovel=70 hivel=127 pitch_keycenter=63
+
+<region> sample=ogg\F#4v4.ogg lokey=65 hikey=67 lovel=0 hivel=69 pitch_keycenter=66 volume=9
+<region> sample=ogg\F#4v13.ogg lokey=65 hikey=67 lovel=70 hivel=127 pitch_keycenter=66
+
+<region> sample=ogg\A4v4.ogg lokey=68 hikey=70 lovel=0 hivel=69 pitch_keycenter=69 volume=9
+<region> sample=ogg\A4v13.ogg lokey=68 hikey=70 lovel=70 hivel=127 pitch_keycenter=69
+
+<region> sample=ogg\C5v4.ogg lokey=71 hikey=73 lovel=0 hivel=69 pitch_keycenter=72 volume=9
+<region> sample=ogg\C5v13.ogg lokey=71 hikey=73 lovel=70 hivel=127 pitch_keycenter=72
+
+<region> sample=ogg\D#5v4.ogg lokey=74 hikey=76 lovel=0 hivel=69 pitch_keycenter=75 volume=9
+<region> sample=ogg\D#5v13.ogg lokey=74 hikey=76 lovel=70 hivel=127 pitch_keycenter=75
+
+<region> sample=ogg\F#5v4.ogg lokey=77 hikey=79 lovel=0 hivel=69 pitch_keycenter=78 volume=9
+<region> sample=ogg\F#5v13.ogg lokey=77 hikey=79 lovel=70 hivel=127 pitch_keycenter=78
+
+<region> sample=ogg\A5v4.ogg lokey=80 hikey=82 lovel=0 hivel=69 pitch_keycenter=81 volume=9
+<region> sample=ogg\A5v13.ogg lokey=80 hikey=82 lovel=70 hivel=127 pitch_keycenter=81
+
+<region> sample=ogg\C6v4.ogg lokey=83 hikey=127 lovel=0 hivel=69 pitch_keycenter=84 volume=9
+<region> sample=ogg\C6v13.ogg lokey=83 hikey=127 lovel=70 hivel=127 pitch_keycenter=84
+
+//========================
+//Notes without dampers
+
+//Release string resonances
+
+//========================
+
+//========================
+
+//========================
+
+//========================
+
+
+
+//=======================
+
+
+
+//========================
+
+
+//======================
+//HammerNoise
+
+
+
+//======================
+//pedalAction

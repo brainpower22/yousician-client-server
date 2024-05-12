@@ -1,0 +1,51 @@
+// Sfz exported from sf2 by Polyphone
+// Name     :ViolinYousician
+// Author   :
+// Copyright:
+// Date     :2017/04/13
+// Comment  :
+
+<group>
+lokey=0 hikey=127
+loop_mode=loop_continuous
+ampeg_attack=0.001
+
+<region>
+sample=samples\Vlnvla-55.ogg
+lokey=0 hikey=61
+pitch_keycenter=55
+pan=0
+offset=0
+end=79068
+loop_start=13381
+loop_end=79060
+
+<region>
+sample=samples\Vlnvla-62.ogg
+lokey=62 hikey=68
+pitch_keycenter=62
+pan=0
+offset=0
+end=66157
+loop_start=43950
+loop_end=66149
+
+<region>
+sample=samples\Vlnvla-69.ogg
+lokey=69 hikey=75
+pitch_keycenter=69
+pan=0
+offset=0
+end=66157
+loop_start=27863
+loop_end=66149
+
+<region>
+sample=samples\Vlnvla-76.ogg
+lokey=76 hikey=127
+pitch_keycenter=76
+pan=0
+offset=0
+end=66157
+loop_start=43960
+loop_end=66149

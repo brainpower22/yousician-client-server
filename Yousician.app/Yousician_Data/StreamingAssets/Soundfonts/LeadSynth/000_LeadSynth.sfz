@@ -1,0 +1,112 @@
+// Sfz exported from sf2 by Polyphone
+// Name     :LeadSynthYS
+// Author   :
+// Copyright:
+// Date     :2016/01/21
+// Comment  :
+
+<group>
+lokey=0 hikey=127
+loop_mode=loop_continuous
+ampeg_attack=0.001
+
+<region>
+sample=samples\samples-synth-1eL.ogg
+lokey=0 hikey=44
+pitch_keycenter=40
+lovel=0 hivel=127
+pan=0
+offset=0
+end=88206
+loop_start=42500
+loop_end=88198
+
+<region>
+sample=samples\samples-synth-1aL.ogg
+lokey=45 hikey=49
+pitch_keycenter=45
+pan=0
+offset=0
+end=88206
+loop_start=22980
+loop_end=88198
+
+<region>
+sample=samples\samples-synth-2dL.ogg
+lokey=50 hikey=54
+pitch_keycenter=50
+pan=0
+offset=0
+end=88206
+loop_start=4558
+loop_end=88198
+
+<region>
+sample=samples\samples-synth-2gL.ogg
+lokey=55 hikey=59
+pitch_keycenter=55
+pan=0
+offset=0
+end=88206
+loop_start=16356
+loop_end=88198
+
+<region>
+sample=samples\samples-synth-3cL.ogg
+lokey=60 hikey=64
+pitch_keycenter=60
+pan=0
+offset=0
+end=88206
+loop_start=19578
+loop_end=88198
+
+<region>
+sample=samples\samples-synth-3fL.ogg
+lokey=65 hikey=69
+pitch_keycenter=65
+pan=0
+offset=0
+end=88206
+loop_start=31225
+loop_end=88198
+
+<region>
+sample=samples\samples-synth-3bbL.ogg
+lokey=70 hikey=74
+pitch_keycenter=70
+pan=0
+offset=0
+end=88206
+loop_start=42643
+loop_end=88198
+
+<region>
+sample=samples\samples-synth-4ebL.ogg
+lokey=75 hikey=79
+pitch_keycenter=75
+pan=0
+offset=0
+end=88206
+loop_start=25380
+loop_end=88198
+
+<region>
+sample=samples\samples-synth-4abL.ogg
+lokey=80 hikey=84
+pitch_keycenter=80
+pan=0
+offset=0
+end=88206
+loop_start=36960
+loop_end=88198
+
+<region>
+sample=samples\samples-synth-5dbL.ogg
+lokey=85 hikey=127
+pitch_keycenter=85
+pan=0
+offset=0
+end=88206
+loop_start=42563
+loop_end=88198

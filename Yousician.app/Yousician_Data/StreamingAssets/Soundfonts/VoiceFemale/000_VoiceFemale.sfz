@@ -1,0 +1,90 @@
+// Sfz exported from sf2 by Polyphone
+// Name     :VoiceFemaleNew
+// Author   :
+// Copyright:
+// Date     :2018/02/22
+// Comment  :
+
+<group>
+lokey=0 hikey=127
+loop_mode=loop_continuous
+
+<region>
+sample=samples\Voice-Sonja-52.ogg
+lokey=0 hikey=53
+pitch_keycenter=52
+pan=0
+offset=0
+end=95999
+loop_start=65820
+loop_end=88818
+
+<region>
+sample=samples\Voice-Sonja-55.ogg
+lokey=54 hikey=56
+pitch_keycenter=55
+pan=0
+offset=0
+end=95999
+loop_start=73377
+loop_end=89527
+
+<region>
+sample=samples\Voice-Sonja-58.ogg
+lokey=57 hikey=59
+pitch_keycenter=58
+pan=0
+offset=0
+end=95999
+loop_start=72990
+loop_end=89065
+
+<region>
+sample=samples\Voice-Sonja-61.ogg
+lokey=60 hikey=62
+pitch_keycenter=61
+pan=0
+offset=0
+end=95999
+loop_start=76540
+loop_end=87277
+
+<region>
+sample=samples\Voice-Sonja-64.ogg
+lokey=63 hikey=65
+pitch_keycenter=64
+pan=0
+offset=0
+end=95999
+loop_start=74725
+loop_end=79962
+
+<region>
+sample=samples\Voice-Sonja-67.ogg
+lokey=66 hikey=68
+pitch_keycenter=67
+pan=0
+offset=0
+end=95999
+loop_start=79157
+loop_end=87988
+
+<region>
+sample=samples\Voice-Sonja-70.ogg
+lokey=69 hikey=71
+pitch_keycenter=70
+pan=0
+offset=0
+end=95999
+loop_start=77610
+loop_end=85638
+
+<region>
+sample=samples\Voice-Sonja-73.ogg
+lokey=72 hikey=127
+pitch_keycenter=73
+pan=0
+offset=0
+end=95999
+loop_start=38203
+loop_end=59413
