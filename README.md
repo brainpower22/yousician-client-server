@@ -1,8 +1,11 @@
 The resources provided by me come from the Internet. Copyright disputes have nothing to do with me. All content and software articles are only used for learning and research purposes. The above content shall not be used for commercial or illegal purposes. Otherwise, the user shall be responsible for all consequences. You must completely delete the above content from your computer within 24 hours after downloading. Please write to e-mail: brainpower22@protonmail.com
 
 ## Usage  
+```
+On first launch:  
 Download yousicianBD.db from [yousician-client-server-db](https://github.com/brainpower22/yousician-client-server-db)  
 Copy yousicianBD.db to %PATH TO YOU SERVER%\Yousician.srv\src\database\  
+```
 Start the server - run server_start.bat  
 Start the application - run yousician.bat  
 Register or use demo credentials:  
