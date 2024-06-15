@@ -2,19 +2,19 @@ The resources provided by me come from the Internet. Copyright disputes have not
 
 ## Usage  
 
-Start the server - run server_start.bat
-Start the application - run yousician.bat
-Register or use demo credentials:
-Login: fan@yousician.com
-Password: 12345
+Start the server - run server_start.bat  
+Start the application - run yousician.bat  
+Register or use demo credentials:  
+Login: fan@yousician.com  
+Password: 12345  
 
 To stop the server and close all processes use server_shutdown.bat
 
-Server:
-nginx version: nginx/1.24.0
-PHP 8.1.2 (cgi-fcgi)
-SQLite 3.30.1
-ffmpeg version 7.0-essentials
+Server:  
+nginx version: nginx/1.24.0  
+PHP 8.1.2 (cgi-fcgi)  
+SQLite 3.30.1  
+ffmpeg version 7.0-essentials  
 
-Client:
-Yousician WINDOWS_2.56.0-5adb577f5a-50254(Mod)
+Client:  
+Yousician WINDOWS_2.56.0-5adb577f5a-50254(Mod)  
