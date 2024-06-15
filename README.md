@@ -3,7 +3,7 @@ The resources provided by me come from the Internet. Copyright disputes have not
 ## Usage  
 ```
 On first launch:  
-Download yousicianBD.db from [yousician-client-server-db](https://github.com/brainpower22/yousician-client-server-db)  
+Download yousicianBD.db from https://github.com/brainpower22/yousician-client-server-db
 Copy yousicianBD.db to %PATH TO YOU SERVER%\Yousician.srv\src\database\  
 ```
 Start the server - run server_start.bat  
