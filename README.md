@@ -14,6 +14,7 @@ Server:
 nginx version: nginx/1.24.0
 PHP 8.1.2 (cgi-fcgi)
 SQLite 3.30.1
+ffmpeg version 7.0-essentials
 
 Client:
 Yousician WINDOWS_2.56.0-5adb577f5a-50254(Mod)
