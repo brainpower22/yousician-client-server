@@ -547,3 +547,17 @@ if (!function_exists('addParameter')) {
         return $array;
     }
 }
+
+if (!function_exists('chkDir')) {
+    /**
+     * @param $file
+     * @return void
+     */
+    function chkDir($file): void
+    {
+        $dirname = pathinfo($file)['dirname'];
+        if (!file_exists($dirname)) {
+            mkdir($dirname, 777, true);
+        }
+    }
+}

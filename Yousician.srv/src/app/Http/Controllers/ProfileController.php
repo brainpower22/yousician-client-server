@@ -15,6 +15,13 @@ class ProfileController
 
     public function switch(ServerRequest $request, Response $response)
     {
+        $switchInstrument = $request->getParsedBody()['instrument'];
+        $result = User::where('_id', session()->get('user')['_id'])->update([
+            'last_used_instrument' => $request->getParsedBody()['instrument']
+        ]);
+        if ($result) {
+            session()->set('last_used_instrument', $switchInstrument);
+        }
         $objectJson = [
             'can_switch' => true,
         ];
@@ -426,5 +433,14 @@ class ProfileController
         } else {
             abort(403);
         }
+    }
+
+    public function thirdPartyServiceStatus(ServerRequest $request, Response $response)
+    {
+        $objectJson = [
+            'youtube_content_available' => true,
+            'personal_youtube_content_available' => true,
+        ];
+        return $response->withJson($objectJson);
     }
 }

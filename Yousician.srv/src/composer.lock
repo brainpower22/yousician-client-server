@@ -4,8 +4,129 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11bbde299bfcd101688863f468202562",
+    "content-hash": "ad786ec758b41da74fc3ff2000872a52",
     "packages": [
+        {
+            "name": "athlon1600/php-curl-client",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Athlon1600/php-curl-client.git",
+                "reference": "eff146de74ee3a4a9a7de1511e300b65b5c8efd2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Athlon1600/php-curl-client/zipball/eff146de74ee3a4a9a7de1511e300b65b5c8efd2",
+                "reference": "eff146de74ee3a4a9a7de1511e300b65b5c8efd2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Curl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple PHP cURL Client",
+            "keywords": [
+                "php curl client"
+            ],
+            "support": {
+                "issues": "https://github.com/Athlon1600/php-curl-client/issues",
+                "source": "https://github.com/Athlon1600/php-curl-client/tree/v1.2.0"
+            },
+            "time": "2023-10-24T23:17:09+00:00"
+        },
+        {
+            "name": "athlon1600/php-curl-file-downloader",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Athlon1600/php-curl-file-downloader.git",
+                "reference": "66391a0b89e2ed8b42ed6341e111f180697e0c5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Athlon1600/php-curl-file-downloader/zipball/66391a0b89e2ed8b42ed6341e111f180697e0c5f",
+                "reference": "66391a0b89e2ed8b42ed6341e111f180697e0c5f",
+                "shasum": ""
+            },
+            "require": {
+                "athlon1600/php-curl-client": "^1.0",
+                "ext-curl": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CurlDownloader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/Athlon1600/php-curl-file-downloader/issues",
+                "source": "https://github.com/Athlon1600/php-curl-file-downloader/tree/v1.0.2"
+            },
+            "time": "2021-02-25T20:29:06+00:00"
+        },
+        {
+            "name": "athlon1600/youtube-downloader",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Athlon1600/youtube-downloader.git",
+                "reference": "3e59fc1be08be1ece9b121ae6b20b2e46b7a9c38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Athlon1600/youtube-downloader/zipball/3e59fc1be08be1ece9b121ae6b20b2e46b7a9c38",
+                "reference": "3e59fc1be08be1ece9b121ae6b20b2e46b7a9c38",
+                "shasum": ""
+            },
+            "require": {
+                "athlon1600/php-curl-file-downloader": "^1.0",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0 || ^9.0 || ^10.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "YouTube\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP powered alternative for youtube-dl",
+            "keywords": [
+                "download youtube",
+                "download youtube videos",
+                "youtube downloader"
+            ],
+            "support": {
+                "issues": "https://github.com/Athlon1600/youtube-downloader/issues",
+                "source": "https://github.com/Athlon1600/youtube-downloader/tree/v4.0.0"
+            },
+            "time": "2023-11-12T21:57:04+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",
@@ -486,6 +607,59 @@
             "time": "2023-02-25T20:23:15+00:00"
         },
         {
+            "name": "illuminate/bus",
+            "version": "v10.37.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/bus.git",
+                "reference": "cb5e55e701a530222f62968086973bf70b2552e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/bus/zipball/cb5e55e701a530222f62968086973bf70b2552e8",
+                "reference": "cb5e55e701a530222f62968086973bf70b2552e8",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/collections": "^10.0",
+                "illuminate/contracts": "^10.0",
+                "illuminate/pipeline": "^10.0",
+                "illuminate/support": "^10.0",
+                "php": "^8.1"
+            },
+            "suggest": {
+                "illuminate/queue": "Required to use closures when chaining jobs (^7.0)."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Bus\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Bus package.",
+            "homepage": "https://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2023-12-12T20:04:59+00:00"
+        },
+        {
             "name": "illuminate/collections",
             "version": "v10.24.0",
             "source": {
@@ -585,6 +759,54 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2023-02-03T08:06:17+00:00"
+        },
+        {
+            "name": "illuminate/config",
+            "version": "v10.37.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/config.git",
+                "reference": "d5e83ceff5c4d5607b1b81763eb4c436911c35da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/config/zipball/d5e83ceff5c4d5607b1b81763eb4c436911c35da",
+                "reference": "d5e83ceff5c4d5607b1b81763eb4c436911c35da",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/collections": "^10.0",
+                "illuminate/contracts": "^10.0",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Config\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Config package.",
+            "homepage": "https://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2022-08-21T15:47:27+00:00"
         },
         {
             "name": "illuminate/container",
@@ -755,6 +977,61 @@
             "time": "2023-09-19T14:11:01+00:00"
         },
         {
+            "name": "illuminate/events",
+            "version": "v10.37.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/events.git",
+                "reference": "8d84d6220a6b3446a0bf3e4138e2eb0e10792bb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/events/zipball/8d84d6220a6b3446a0bf3e4138e2eb0e10792bb1",
+                "reference": "8d84d6220a6b3446a0bf3e4138e2eb0e10792bb1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/bus": "^10.0",
+                "illuminate/collections": "^10.0",
+                "illuminate/container": "^10.0",
+                "illuminate/contracts": "^10.0",
+                "illuminate/macroable": "^10.0",
+                "illuminate/support": "^10.0",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "Illuminate\\Events\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Events package.",
+            "homepage": "https://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2023-10-30T00:59:35+00:00"
+        },
+        {
             "name": "illuminate/filesystem",
             "version": "v10.24.0",
             "source": {
@@ -863,6 +1140,54 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2023-06-05T12:46:42+00:00"
+        },
+        {
+            "name": "illuminate/pipeline",
+            "version": "v10.37.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/pipeline.git",
+                "reference": "f2119ae9a26e420bf0ed9d5e7e7aa4548547e7b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/pipeline/zipball/f2119ae9a26e420bf0ed9d5e7e7aa4548547e7b1",
+                "reference": "f2119ae9a26e420bf0ed9d5e7e7aa4548547e7b1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.0",
+                "illuminate/support": "^10.0",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Pipeline\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Pipeline package.",
+            "homepage": "https://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2023-03-03T15:55:44+00:00"
         },
         {
             "name": "illuminate/support",
@@ -1046,6 +1371,123 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2023-08-30T18:57:28+00:00"
+        },
+        {
+            "name": "illuminate/view",
+            "version": "v10.37.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/view.git",
+                "reference": "ce59846a4476666da70aeab10e0c8ab7206e3f0f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/ce59846a4476666da70aeab10e0c8ab7206e3f0f",
+                "reference": "ce59846a4476666da70aeab10e0c8ab7206e3f0f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "illuminate/collections": "^10.0",
+                "illuminate/container": "^10.0",
+                "illuminate/contracts": "^10.0",
+                "illuminate/events": "^10.0",
+                "illuminate/filesystem": "^10.0",
+                "illuminate/macroable": "^10.0",
+                "illuminate/support": "^10.0",
+                "php": "^8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "10.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\View\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate View package.",
+            "homepage": "https://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2023-12-01T22:04:08+00:00"
+        },
+        {
+            "name": "jenssegers/blade",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/blade.git",
+                "reference": "0f3df9b6cdf43ff4f8716a3de16afd2f3450ff41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/blade/zipball/0f3df9b6cdf43ff4f8716a3de16afd2f3450ff41",
+                "reference": "0f3df9b6cdf43ff4f8716a3de16afd2f3450ff41",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "^9.0|^10.0",
+                "illuminate/view": "^9.0|^10.0",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.13",
+                "phpunit/phpunit": "^10.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jenssegers\\Blade\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                }
+            ],
+            "description": "The standalone version of Laravel's Blade templating engine for use outside of Laravel.",
+            "keywords": [
+                "blade",
+                "laravel",
+                "render",
+                "template",
+                "view"
+            ],
+            "support": {
+                "issues": "https://github.com/jenssegers/blade/issues",
+                "source": "https://github.com/jenssegers/blade/tree/v2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/jenssegers",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/jenssegers-blade",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2023-12-04T13:31:17+00:00"
         },
         {
             "name": "laravel/serializable-closure",

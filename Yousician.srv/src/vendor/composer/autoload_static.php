@@ -17,6 +17,7 @@ class ComposerStaticInit779e4c8da3d310e7d90430ac8adf5495
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
@@ -35,6 +36,10 @@ class ComposerStaticInit779e4c8da3d310e7d90430ac8adf5495
         array (
             'Zeuxisoo\\Whoops\\Slim\\Tests\\' => 27,
             'Zeuxisoo\\Whoops\\Slim\\' => 21,
+        ),
+        'Y' => 
+        array (
+            'YouTube\\' => 8,
         ),
         'W' => 
         array (
@@ -77,16 +82,25 @@ class ComposerStaticInit779e4c8da3d310e7d90430ac8adf5495
         array (
             'Laravel\\SerializableClosure\\' => 28,
         ),
+        'J' => 
+        array (
+            'Jenssegers\\Blade\\' => 17,
+        ),
         'I' => 
         array (
             'Invoker\\' => 8,
+            'Illuminate\\View\\' => 16,
             'Illuminate\\Validation\\' => 22,
             'Illuminate\\Translation\\' => 23,
             'Illuminate\\Support\\' => 19,
+            'Illuminate\\Pipeline\\' => 20,
             'Illuminate\\Filesystem\\' => 22,
+            'Illuminate\\Events\\' => 18,
             'Illuminate\\Database\\' => 20,
             'Illuminate\\Contracts\\' => 21,
             'Illuminate\\Container\\' => 21,
+            'Illuminate\\Config\\' => 18,
+            'Illuminate\\Bus\\' => 15,
         ),
         'G' => 
         array (
@@ -111,6 +125,8 @@ class ComposerStaticInit779e4c8da3d310e7d90430ac8adf5495
         ),
         'C' => 
         array (
+            'Curl\\' => 5,
+            'CurlDownloader\\' => 15,
             'Carbon\\' => 7,
         ),
         'B' => 
@@ -136,6 +152,10 @@ class ComposerStaticInit779e4c8da3d310e7d90430ac8adf5495
         'Zeuxisoo\\Whoops\\Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/zeuxisoo/slim-whoops/src/Zeuxisoo/Whoops/Slim',
+        ),
+        'YouTube\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/athlon1600/youtube-downloader/src',
         ),
         'Whoops\\' => 
         array (
@@ -255,9 +275,17 @@ class ComposerStaticInit779e4c8da3d310e7d90430ac8adf5495
         array (
             0 => __DIR__ . '/..' . '/laravel/serializable-closure/src',
         ),
+        'Jenssegers\\Blade\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jenssegers/blade/src',
+        ),
         'Invoker\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-di/invoker/src',
+        ),
+        'Illuminate\\View\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/view',
         ),
         'Illuminate\\Validation\\' => 
         array (
@@ -274,9 +302,17 @@ class ComposerStaticInit779e4c8da3d310e7d90430ac8adf5495
             2 => __DIR__ . '/..' . '/illuminate/macroable',
             3 => __DIR__ . '/..' . '/illuminate/support',
         ),
+        'Illuminate\\Pipeline\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/pipeline',
+        ),
         'Illuminate\\Filesystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/filesystem',
+        ),
+        'Illuminate\\Events\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/events',
         ),
         'Illuminate\\Database\\' => 
         array (
@@ -289,6 +325,14 @@ class ComposerStaticInit779e4c8da3d310e7d90430ac8adf5495
         'Illuminate\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/container',
+        ),
+        'Illuminate\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/config',
+        ),
+        'Illuminate\\Bus\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/bus',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
@@ -325,6 +369,14 @@ class ComposerStaticInit779e4c8da3d310e7d90430ac8adf5495
         'DI\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-di/php-di/src',
+        ),
+        'Curl\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/athlon1600/php-curl-client/src',
+        ),
+        'CurlDownloader\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/athlon1600/php-curl-file-downloader/src',
         ),
         'Carbon\\' => 
         array (

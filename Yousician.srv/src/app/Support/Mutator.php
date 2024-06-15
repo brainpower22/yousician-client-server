@@ -19,8 +19,9 @@ class Mutator
 
         if ($audios = $song->getRelation('audios')) {
             if ($audio_link = $audios->first()) {
+                $audio_link->type = $audio_link->type == 'main' ? 'compressedaudiofile' : $audio_link->type;
                 $song->audio_link = $audio_link;
-                $song->audio_link->type = 1;
+                $song->audio_link->type = array_search($song->audio_link->type, $audio_link->audioLinkTypes);
                 $song->audio = true;
             }
             $song->setRelation('audios', $audios->keyBy('type')->map(function ($audio) {

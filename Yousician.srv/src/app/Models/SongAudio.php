@@ -11,6 +11,7 @@ class SongAudio extends Model
 
     public $timestamps = false;
 
+    public array $audioLinkTypes = ['unsupported', 'compressedaudiofile', 'soundcloud', 'youtube', 'interactivevideo'];
     /**
      * The attributes that should be hidden for arrays.
      */
@@ -24,8 +25,23 @@ class SongAudio extends Model
     {
         return Attribute::make(
 //            get: fn(string $value) => base_url() . str_replace('.ogg', '', $value),
-            get: fn(string $value) => assets($value),
+            get: fn(string $value) => $this->prepareUrl($value),
         );
+    }
+
+    private function prepareUrl($value)
+    {
+        $audioType = $this->getAttribute('type');
+        if(is_int($audioType)){
+            $audioType = $this->audioLinkTypes[$this->getAttribute('type')];
+        }
+        switch ($audioType) {
+            case 'compressedaudiofile':
+                return assets($value);
+                break;
+            default:
+                return $value;
+        }
     }
 
 }

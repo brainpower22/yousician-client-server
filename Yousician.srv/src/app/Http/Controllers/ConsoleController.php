@@ -41,7 +41,7 @@ class ConsoleController extends Controller
 {
     public function fillDB()
     {
-        $this->seedSyllabus();
+//        $this->seedSyllabus();
 //        $this->seedSyllabusProgress();
 //        $this->supplementSyllabusProgress();
         echo 'OK';
@@ -125,8 +125,8 @@ class ConsoleController extends Controller
                     }
                 }
                 if($needAdd) {
-                    $this->processSong($song, 'syllabus');
-                }
+            $this->processSong($song, 'syllabus');
+        }
                 $tags = array_merge($tags, $song["tags"]);
             }
         }
@@ -439,7 +439,7 @@ class ConsoleController extends Controller
     {
         $genresData = [];
         $jsonDate = json_decode(file_get_contents('d:\Projects\yousician\materials\content_guitar_collection_groups-homescreen.json'), true);
-        foreach ($jsonDate["groups"][1]["collections"] as $collection) {
+        foreach ($jsonDate["groups"][1]["collections"] as $collection){
             $genresData[slug($collection["details"]["title"])] = [
                 'title' => $collection["details"]["title"],
                 'description' => $collection["details"]["description"],

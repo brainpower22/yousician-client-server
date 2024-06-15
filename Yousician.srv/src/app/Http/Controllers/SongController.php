@@ -12,12 +12,26 @@ use App\Models\SongMeta;
 use App\Models\SongTag;
 use App\Models\UserFavoriteSong;
 use App\Support\Auth;
+use App\Support\Mutator;
 use Illuminate\Filesystem\Filesystem;
 use Slim\Http\Response;
 use Slim\Http\ServerRequest;
 
 class SongController extends Controller
 {
+
+    public function auxdata(ServerRequest $request, Response $response)
+    {
+        $fileNameWithoutExtension = '251_slipknot-psychosocial-official-video-hd';
+
+        $songs = Song::where('doc_id', $request->getAttribute('id'))
+            ->where('instrument', $request->getParam('instrument'))
+            ->with(['audios', 'exercise', 'derived_tags', 'tags', 'images', 'meta', 'genres', 'exercise_info'])
+            ->get();
+        $song = $songs->first();
+        $objectJson = Mutator::song($song);
+        return $response->withJson($objectJson);
+    }
 
     public function mxl(ServerRequest $request, Response $response)
     {
@@ -110,7 +124,7 @@ class SongController extends Controller
                     SongDerivedTag::create(['song_id' => $modelSong->id, 'tag' => $genre]);
                     SongTag::create(['song_id' => $modelSong->id, 'tag' => $genre]);
                     if (isset($requestParsedBody['audio_link'])) {
-                        $this->uploadSong($requestParsedBody, $modelSong);
+                        $this->uploadSong($requestParsedBody['audio_link'], $modelSong);
                     }
                 }
             }
@@ -132,18 +146,16 @@ class SongController extends Controller
         SongTag::where('song_id', $modelSong->id)->update(['tag' => $requestParsedBody['tags'][0]]);
 
         $songAudio = SongAudio::where('song_id', $modelSong->id)->first();
-        if ($songAudio && isset($requestParsedBody['audio_link'])) {
-
-            $songAudioPathInfo = pathinfo($songAudio->url);
-            $audioLinkPathInfo = pathinfo($requestParsedBody['audio_link']['url']);
-
-            if ($songAudioPathInfo['basename'] !== $audioLinkPathInfo['basename']) {
-                $songAudio->delete();
-                unlink($assetsPath . $songAudio->getRawOriginal('url'));
-                $this->uploadSong($requestParsedBody, $modelSong);
+        if (isset($requestParsedBody['audio_link'])) {
+            switch ($requestParsedBody['audio_link']['type']) {
+                case 'compressedaudiofile':
+                    $this->processCompressedAudioFile($requestParsedBody['audio_link'], $songAudio, $modelSong);
+                    break;
+                case 'youtube':
+                    $this->processYoutube($requestParsedBody['audio_link'], $songAudio, $modelSong);
+                    break;
             }
         }
-
         return $response->withJson((object)[]);
     }
 
@@ -164,20 +176,36 @@ class SongController extends Controller
         return $response->withJson((object)[]);
     }
 
-    public function uploadSong($requestParsedBody, $modelSong): void
+    public function uploadSong($audio_link, $modelSong): void
     {
+        $createSongAudio = true;
+        $songAudioUrl = $audio_link['url'];
         $assetsPath = base_path() . 'public/assets/';
-        $pathInfo = pathinfo($requestParsedBody['audio_link']['url']);
-        $songAudioUrl = 'songs/audio/' . uuidV4() . '.' . $pathInfo['extension'];
-        if (file_put_contents($assetsPath . $songAudioUrl, file_get_contents($requestParsedBody['audio_link']['url'], false, $this->getRequestContext()))) {
-            SongAudio::create(array_merge($requestParsedBody['audio_link'], [
+        $name = $original_file_name = $audio_link['type'];
+        switch ($audio_link['type']) {
+            case 'compressedaudiofile':
+                $pathInfo = pathinfo($audio_link['url']);
+                $name = $original_file_name = $pathInfo['basename'];
+                $songAudioUrl = '/' . 'songs/audio/' . uuidV4() . '.' . $pathInfo['extension'];
+                $fileName = $assetsPath . $songAudioUrl;
+                $contents = file_get_contents($audio_link['url'], false, $this->getRequestContext());
+                $createSongAudio = file_put_contents($fileName, $contents);
+                break;
+            case 'youtube':
+                preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $songAudioUrl, $match);
+                $original_file_name = $match[1];
+                break;
+        }
+
+        if ($createSongAudio) {
+            SongAudio::create(array_merge($audio_link, [
                 'song_id' => $modelSong->id,
                 '_id' => mongoObjectId(),
-                'type' => 'main',
-                'url' => '/' . $songAudioUrl,
+                'type' => $audio_link['type'],
+                'url' => $songAudioUrl,
                 'key' => $songAudioUrl,
-                'name' => $pathInfo['basename'],
-                'original_file_name' => $pathInfo['basename'],
+                'name' => $name,
+                'original_file_name' => $original_file_name,
             ]));
         }
     }
@@ -223,5 +251,59 @@ class SongController extends Controller
         ];
 
         return stream_context_create($opts);
+    }
+
+    private function processCompressedAudioFile(mixed $audio_link, $songAudio, $modelSong): void
+    {
+        $needUpload = false;
+        $assetsPath = base_path() . 'public/assets';
+        if ($songAudio) {
+            $songAudioPathInfo = pathinfo($songAudio->url);
+            $audioLinkPathInfo = pathinfo($audio_link['url']);
+            if ($songAudioPathInfo['basename'] !== $audioLinkPathInfo['basename']) {
+                $songAudio->delete();
+                $needUpload = true;
+            }
+            switch ($songAudio->type) {
+                case 'compressedaudiofile':
+                    if ($songAudioPathInfo['basename'] !== $audioLinkPathInfo['basename']) {
+                        unlink($assetsPath . $songAudio->getRawOriginal('url'));
+                    }
+                    break;
+                case 'youtube':
+                    break;
+            }
+        } elseif (isset($audio_link)) {
+            $needUpload = true;
+        }
+        if ($needUpload) {
+            $this->uploadSong($audio_link, $modelSong);
+        }
+    }
+
+    private function processYoutube(mixed $audio_link, $songAudio, $modelSong): void
+    {
+        $needUpload = false;
+        $assetsPath = base_path() . 'public/assets';
+        if ($songAudio) {
+            $songAudioPathInfo = pathinfo($songAudio->url);
+            $audioLinkPathInfo = pathinfo($audio_link['url']);
+            if ($songAudioPathInfo['basename'] !== $audioLinkPathInfo['basename']) {
+                $songAudio->delete();
+                $needUpload = true;
+            }
+            switch ($songAudio->type) {
+                case 'compressedaudiofile':
+                    unlink($assetsPath . $songAudio->getRawOriginal('url'));
+                    break;
+                case 'youtube':
+                    break;
+            }
+        } elseif (isset($audio_link)) {
+            $needUpload = true;
+        }
+        if ($needUpload) {
+            $this->uploadSong($audio_link, $modelSong);
+        }
     }
 }

@@ -47,7 +47,12 @@ class LoadDebuggingPage extends Bootstrapper
                 ];
             }
             header('content-type: application/json');
-            echo json_encode($with);
+
+            $exceptionResponse = $with;
+            if(method_exists($exception,'getRequest')){
+                $exceptionResponse = array_merge(['path' => $exception->getRequest()->getUri()->getPath()], $with);
+            }
+            echo json_encode($exceptionResponse);
             exit;
 
         };

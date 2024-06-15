@@ -6,10 +6,18 @@ use App\Models\UserProgressSong;
 use App\Models\UserProgressTask;
 use Slim\Http\ServerRequest;
 use Slim\Http\Response;
+use App\Support\View;
 
 class HomeController extends Controller
 {
-    public function phpInfo(ServerRequest $request, Response $response)
+
+    public function index(View $view)
+    {
+        return $view('dashboard.home');
+    }
+
+
+public function phpInfo(ServerRequest $request, Response $response)
     {
         phpinfo();
         exit;

@@ -49,7 +49,7 @@ class RouteServiceProvider extends ServiceProvider
         $add = $this->resolve('middleware');
         $web = $this->resolve(RouteGroup::class);
 
-        return $web->routes($get)->prefix('/web')->middleware([
+        return $web->routes($get)->prefix('')->middleware([
             ...$add['web'],
             ...$add['global']
         ]);

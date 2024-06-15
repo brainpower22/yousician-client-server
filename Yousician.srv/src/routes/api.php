@@ -3,8 +3,6 @@
 use App\Http\Middleware\SessionMiddleware;
 use App\Support\Route;
 
-Route::get('/phpinfo', 'HomeController@phpInfo')->setName('phpinfo');
-
 Route::group('api', function () {
     Route::post('/event/new/Exception', 'Controller@empty')->setName('postException');
 });
@@ -23,12 +21,13 @@ Route::group('', function () {
     Route::get('/syllabus/guitar/versions', 'SyllabusController@versions')->setName('versions');
     Route::get('/syllabus/{instrument}', 'SyllabusController@instrument')->setName('syllabusInstrument');
 
-    Route::get('/songs/gp/{id}', 'SongController@mxl')->setName('songsMxl');
+    Route::get('/songs/gp/{id}', 'SongController@mxl')->setName('songsGp');
     Route::get('/songs/mxl/{id}', 'SongController@mxl')->setName('songsMxl');
     Route::post('/songs/user/remove/{doc_id}', 'SongController@songsUserRemove')->setName('postSongsUserRemove');
     Route::post('/songs/filter/favorite/ids', 'SongController@filterFavoriteIds')->setName('postSongsFilterFavoriteIds');
     Route::post('/songs/{id}/favorite/add', 'SongController@favoriteAdd')->setName('songsFavoriteAdd');
     Route::post('/songs/{id}/favorite/remove', 'SongController@favoriteRemove')->setName('songsFavoriteRemove');
+    Route::post('/songs/{id}/auxdata', 'SongController@auxdata')->setName('songsAuxdata');
 
     Route::post('/usersongs', 'SongController@userSongs')->setName('postUserSongs');
     Route::post('/usersongs/modify/{doc_id}', 'SongController@userSongsModify')->setName('postUserSongsModify');
@@ -37,7 +36,9 @@ Route::group('', function () {
 
     Route::get('/notifications', 'NotificationController@notifications')->setName('getNotifications');
     Route::get('/ratings', 'RatingController@ratings')->setName('getRatings');
-    Route::get('/third_party_service_status', 'Controller@empty')->setName('getThirdPartyServiceStatus');
+    Route::get('/third_party_service_status', 'ProfileController@thirdPartyServiceStatus')->setName('getThirdPartyServiceStatus');
+
+    Route::get('/extracted_audio_data/youtube/{id}', 'ExtractAudioData@youtube')->setName('getThirdPartyServiceStatus');
 
     Route::get('/users/profile/subscription', 'PaymentController@subscriptionV1')->setName('usersProfileSubscription');
     
