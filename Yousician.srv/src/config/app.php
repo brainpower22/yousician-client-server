@@ -4,7 +4,7 @@ return [
     /**
      * Application name
      */
-    'name' => env('APP_NAME', 'Slim 4 Auth App'),
+    'name' => env('APP_NAME', 'Yousician Local Server'),
 
     /**
      * Application Environment
