@@ -1,5 +1,4 @@
 Yousician.srv/src/.idea/
-Yousician.srv/logs/
-Yousician.srv/src/storage/cache/
-Yousician.srv/src/storage/error_logs/
 Yousician.srv/src/database/yousicianBD.db
+*.php
+*.log
