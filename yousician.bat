@@ -1,3 +1,3 @@
 @echo off
-set "app=%~dp0Yousician.app\Yousician.exe"
-%app% --api http://127.0.0.1:8535
+set app="%~dp0Yousician.app\Yousician.exe"
+%app% --api http://localhost:8535

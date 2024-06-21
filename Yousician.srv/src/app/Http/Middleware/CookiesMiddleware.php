@@ -36,7 +36,7 @@ class CookiesMiddleware
             ];
             $cookies->set('session', [
                 'value' => base64_encode(json_encode($valueArray)),
-                'domain' => '127.0.0.1',
+                'domain' => 'localhost',
                 'expires' => 'Sun, 20 Sep 2043 15:08:25 GMT',
                 'path' => '/',
                 'encode' => false,
@@ -44,7 +44,7 @@ class CookiesMiddleware
         } else {
             $cookies->set('session', [
                 'value' => '',
-                'domain' => '127.0.0.1',
+                'domain' => 'localhost',
                 'expires' => 'Sun, 20 Sep 2043 15:08:25 GMT',
                 'path' => '/',
                 'encode' => false,

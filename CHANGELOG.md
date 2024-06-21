@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.4 (2024-06-21)
+SERVER:
+- fixed start server with spaces in path
+APP:
+- fixed embedding youtube backtrack on localhost
+
 ### 1.0.3 (2024-06-15)
 SERVER:
 - fix upload backtrack

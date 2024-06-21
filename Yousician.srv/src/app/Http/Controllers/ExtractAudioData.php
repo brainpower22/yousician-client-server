@@ -117,12 +117,12 @@ class ExtractAudioData
             . $oggFileName;
 
         if ($needConvert) {
-            $shellCommand = $_SERVER['scriptDir'] . $this->ffmpeg . ' -y -i "' . $originalFile . '" -acodec libvorbis -aq 4 -vn -ac 2 -map_metadata 0 "' . $oggFilePath . '" 2>&1';
+            $shellCommand = '"' . $_SERVER['scriptDir'] . $this->ffmpeg . '" -y -i "' . $originalFile . '" -acodec libvorbis -aq 4 -vn -ac 2 -map_metadata 0 "' . $oggFilePath . '" 2>&1';
             exec($shellCommand);
         }
 
         if ($needExtract) {
-            $shellCommand = $_SERVER['scriptDir'] . $this->extractor . ' "' . $oggFilePath . '" 2>&1';
+            $shellCommand = '"' . $_SERVER['scriptDir'] . $this->extractor . '" "' . $oggFilePath . '" 2>&1';
             exec($shellCommand);
         }
 
