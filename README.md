@@ -8,7 +8,7 @@ Please write to e-mail: brainpower22@protonmail.com
 
 ## Changelog
 
-### Deleted repo upon request of YousicianOfficial
+### Deleted repo upon request of YousicianOfficial (2024-06-29)
 
 ### 1.0.4 (2024-06-21)
 SERVER:
