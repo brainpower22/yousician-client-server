@@ -1,40 +1,14 @@
-> [!WARNING]
-> All content  are only used for learning and research purposes.  
-> Copyright disputes have nothing to do with me.  
-> The above content shall not be used for commercial or illegal purposes.  
-> Otherwise, the user shall be responsible for all consequences.  
-> This solution provides you with a deleted tool and features that could help you reach new heights in your creativity.  
-> You must completely delete the above content from your computer within 24 hours after downloading.
-  
-> [!TIP]
-> To take advantage of the benefits and gain access to training, a database of professional tracks and other functionality, we recommend purchasing a subscription on the official website [https://yousician.com/](https://yousician.com/)
+> [!IMPORTANT]
+> YousicianOfficial demanded that everything be deleted:
+> - We kindly ask that you remove this thread as the practice outlined is in clear violation of our Terms of Service.  
+> - We are very glad to hear that you are interested in seeing the option to add custom songs to Yousician and we'll make sure to share your request with our Design team, but in the meantime, please remove this thread and refrain from posting similar content.  
+> - Thank you for your understanding and cooperation on this.
 
 Please write to e-mail: brainpower22@protonmail.com
 
-## Usage  
-```
-On first launch:  
-Download yousicianBD.db from https://github.com/brainpower22/yousician-client-server-db
-Copy yousicianBD.db to %PATH_TO_YOU_SERVER%\Yousician.srv\src\database\  
-```
-Start the server - run server_start.bat  
-Start the application - run yousician.bat  
-Register or use demo credentials:  
-Login: fan@yousician.com  
-Password: 12345  
-
-To stop the server and close all processes use server_shutdown.bat
-
-Server:  
-nginx version: nginx/1.24.0  
-PHP 8.1.2 (cgi-fcgi)  
-SQLite 3.30.1  
-ffmpeg version 7.0-essentials  
-
-Client:  
-Yousician WINDOWS_2.56.0-5adb577f5a-50254(Mod)  
-
 ## Changelog
+
+### Deleted repo upon request of YousicianOfficial
 
 ### 1.0.4 (2024-06-21)
 SERVER:

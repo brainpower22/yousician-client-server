@@ -1,5 +1,7 @@
 # Changelog
 
+### Deleted repo upon request of YousicianOfficial (2024-06-29)
+
 ### 1.0.4 (2024-06-21)
 SERVER:
 - fixed start server with spaces in path
